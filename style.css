@@ -1,0 +1,633 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #b4b4b4;
+  color: #222;
+}
+
+.etoile {
+  opacity: 0;
+  width: 2rem;
+  height: 2rem;
+  background: white;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+}
+
+h4{
+  opacity: 0;
+  font-size: 0rem;
+}
+
+.valeur-py .etoile:nth-child(-n+4) {
+  animation: aetoile 1s ease forwards;
+}
+.valeur-py .etoile:nth-child(1) { animation-delay: 0.2s; }
+.valeur-py .etoile:nth-child(2) { animation-delay: 0.4s; }
+.valeur-py .etoile:nth-child(3) { animation-delay: 0.6s; }
+.valeur-py .etoile:nth-child(4) { animation-delay: 0.8s; }
+
+.valeur-py .etoile:nth-child(n+5){
+  animation: aetoileb 1s ease forwards;
+  animation-delay: 1s;
+}
+
+.valeur-html .etoile:nth-child(-n+3) {
+  animation: aetoile 1s ease forwards;
+}
+.valeur-html .etoile:nth-child(1) { animation-delay: 0.2s; }
+.valeur-html .etoile:nth-child(2) { animation-delay: 0.4s; }
+.valeur-html .etoile:nth-child(3) { animation-delay: 0.6s; }
+
+.valeur-html .etoile:nth-child(n+4){
+  animation: aetoileb 1s ease forwards;
+}
+.valeur-html .etoile:nth-child(4) { animation-delay: 0.8s; }
+.valeur-html .etoile:nth-child(5) { animation-delay: 1s; }
+
+.valeur-css .etoile:nth-child(-n+3) {
+  animation: aetoile 1s ease forwards;
+}
+.valeur-css .etoile:nth-child(1) { animation-delay: 0.2s; }
+.valeur-css .etoile:nth-child(2) { animation-delay: 0.4s; }
+.valeur-css .etoile:nth-child(3) { animation-delay: 0.6s; }
+
+.valeur-css .etoile:nth-child(n+4) {
+  animation: aetoileb 1s ease forwards;
+}
+.valeur-css .etoile:nth-child(4) { animation-delay: 0.8s; }
+.valeur-css .etoile:nth-child(5) { animation-delay: 1s; }
+
+
+header {
+  display: flex;
+  align-items: center;
+  background: #00649e;
+}
+
+.photo-joueur img {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 8px;
+  margin-left: 20rem;
+  margin-top: 5rem;
+  display: block;
+  margin-bottom: 0;
+}
+
+.logo img {
+  position: absolute;
+  left: 8rem;
+  top: 1rem;
+  width: 8rem;
+  padding: 1rem;
+}
+
+.equipeposte {
+  font-size: 1.1em;
+  color: rgb(242, 233, 233);
+  opacity: 0.8;
+}
+
+.mon-nom {
+  font-size: 2.5em;
+  color: rgb(242, 233, 233);
+  font-family: Impact;
+}
+
+.logo-media {
+  position: absolute;
+  right: 12rem;
+  top: 12.5rem;
+  transform: translateY(-50%);
+}
+
+.logo-media img {
+  width: 4rem;
+  opacity: 0.9;
+  background-color: #00649e;
+}
+
+.statbio {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  background: #004c79;
+  color: white;
+  margin-top: 0.1rem;
+}
+
+.gauche {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-right: 1em;
+}
+
+.droite {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  border: solid 0.1em;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-left: 0.1em solid white;
+  border-bottom: 0.1em solid white;
+  padding: 1em;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-left: 0.1em solid white;
+  border-bottom: 0.1em solid white;
+  padding: 1em;
+}
+
+.stat-value {
+  font-size: 1.4em;
+  font-weight: bold;
+  display: flex;
+  margin-top: 0.5em;
+}
+
+.label-py img {
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
+  width: 2.5rem;
+  opacity: 0.9;
+}
+
+.valeur-py {
+  font-size: 1.4rem;
+  display: flex;
+  margin-top: 0.4rem;
+}
+
+.label-html img {
+  width: 3rem;
+  opacity: 0.9;
+}
+
+.valeur-html {
+  font-size: 1.4em;
+  display: flex;
+  margin-top: 0.5em;
+}
+
+.label-css img {
+  width: 2.25rem;
+  opacity: 0.9;
+}
+
+.valeur-css {
+  font-size: 1.4em;
+  display: flex;
+  margin-top: 0.5em;
+}
+
+.stat-label {
+  font-size: 0.8em;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.tabs {
+  display: flex;
+  background: #cccaca;
+}
+
+.tab {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  color: #555;
+}
+
+.tab.active {
+  color: black;
+  border-bottom: 3px solid black;
+}
+
+.tab-content {
+  padding: 20px;
+  background: #b4b4b4;
+}
+
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+.presentation{
+  font-size: 2rem;
+  margin-left: 2rem;
+  margin-top: 8rem;
+}
+
+.hangman {
+  display: flex;
+  flex-direction: row;
+  margin-right: 1rem;
+}
+
+.hangmandescription {
+  margin-left: 5rem;
+  margin-top: 5rem;
+  font-size: 2rem;
+}
+
+.imagehangman {
+  margin-left: 20rem;
+  margin-top: 8rem;
+}
+
+h2 {
+  color: rgb(39, 147, 208);
+  margin-top: 0;
+  text-align: center;
+  font-size: 4rem;
+}
+
+h3 {
+  color: rgb(39, 147, 208);
+  margin-top: 1rem;
+  font-size: 3rem;
+}
+
+.vigenere {
+  display: flex;
+  margin-top: 8rem;
+}
+
+.vigeneretitre {
+  text-align: right;
+  margin-top: 5rem
+}
+
+.vigeneredescription {
+  text-align: right;
+  margin-right: 5rem;
+  margin-top: 1rem;
+  font-size: 2rem;
+  order: 2;
+}
+
+.imagevigenere {
+  height: 20rem;
+  margin-left: 1rem;
+  margin-right: 6rem;
+}
+
+.nomprenom {
+  display: flex;
+  gap: 1rem;
+}
+
+.nomprenom .input-container {
+  flex: 1;
+}
+
+input,
+textarea {
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.contact-section {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  margin-bottom: 15px;
+  margin-right: 1.5rem;
+}
+
+.input-container label {
+  font-size: 1rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-container input,
+.input-container textarea {
+  width: 100%;
+  padding: 0.625rem;
+  font-size: 1rem;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-radius: 4px;
+}
+
+.input-container textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.button-container {
+  text-align: center;
+}
+
+.bouton-envoyer {
+  background-color: rgb(39, 147, 208);
+  color: white;
+  font-size: 1rem;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+@keyframes aetoile {
+  0% {
+    transform: rotate(0deg) scale(0);
+    background: white;
+    opacity: 0;
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+    background: gold;
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+    background: gold;
+    opacity: 1;
+  }
+}
+
+@keyframes aetoileb {
+  0% {
+    transform: rotate(0deg) scale(0);
+    background: white;
+    opacity: 0;
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+    background:white;
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+    background: white;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1399px) {
+
+
+  .gauche {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: nowrap;
+  }
+
+  .droite {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 1399px) {
+  .photo-joueur img {
+    width: 22rem;
+    height: auto;
+  }
+
+  .logo img {
+    left: 3rem;
+    top: 1rem;
+    width: 7rem;
+  }
+
+  .logo-media {
+    right: 1rem;
+    top: 15rem;
+  }
+
+  .statbio {
+    grid-template-columns: 1fr;
+  }
+
+  .gauche,
+  .droite {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .stats, .stat-card {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .stat-value {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 1024px) {
+
+  header { 
+    flex-direction: column;
+    text-align: center; 
+    padding: 1rem;
+  }
+
+  .logo img {
+    position: static; 
+    margin: 0 auto 0.5rem; 
+    width: 6rem;
+  }
+  
+  .mon-nom {
+   font-size: 2em; 
+   margin-top: 0.5rem;
+   }
+
+  .photo-joueur img {
+    width: 16rem;
+    height: auto; 
+    margin: 0.5rem auto; 
+  }
+  
+  .equipeposte {
+    font-size: 1em; 
+    margin: 0.25rem 0; 
+  }
+  
+  .logo-media {
+    position: static;
+    margin: 0.5rem auto 0; 
+  }
+
+  .statbio {
+   grid-template-columns: 1fr;
+  }
+  
+  .gauche,
+  .droite {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto; 
+  }
+  
+  .stats, 
+  .stat-card {
+    border-left: none;
+    border-bottom: 1px solid white; 
+    padding: 1rem; 
+  }
+
+  .hangman, 
+  .vigenere { 
+    flex-direction: column; 
+    align-items: center; 
+    margin: 2rem 0; 
+  }
+  
+  .hangmandescription, 
+  .vigeneredescription {
+    margin: 2rem; 
+    text-align: center; 
+  }
+  
+  .imagehangman, 
+  .imagevigenere {
+    margin: 1rem auto; 
+    max-width: 90%; 
+    height: auto; 
+  }
+  
+  .vigeneretitre {
+    text-align: center; 
+  }
+}
+
+@media (max-width: 768px) {
+  header { 
+    flex-direction: column; 
+    align-items: center; 
+    padding: 0.25rem; 
+    text-align: center; 
+    min-height: auto; 
+  }
+  
+  .logo img { 
+    width: 3rem; 
+    margin: 0 auto 0.25rem; 
+  }
+
+  .photo-joueur img { 
+    width: 8rem; 
+    height: auto; 
+    margin: 0.25rem auto; 
+  }
+  
+  .mon-nom {
+    font-size: 1.2em; 
+    margin: 0.25rem 0; 
+  }
+
+  .equipeposte { 
+    font-size: 0.8em; 
+    margin: 0.2rem 0; 
+  }
+  
+  .logo-media { 
+    margin: 1rem auto 0; 
+  }
+
+  .statbio {
+    display: flex; 
+    flex-direction: column; 
+    gap: 0.5rem; 
+  }
+  
+  .statbio article {
+    display: flex; 
+    flex-direction: column; 
+    gap: 0.25rem; 
+    border: none; 
+  }
+
+  .stats, 
+  .stat-card {
+    border: none; 
+    padding: 0.5rem; 
+    text-align: center; 
+  }
+  
+  .valeur-py,
+  .valeur-html, 
+  .valeur-css {
+    justify-content: center; 
+    flex-wrap: nowrap; 
+  }
+
+  .hangman, 
+  .vigenere {
+    flex-direction: column; 
+    align-items: center; 
+    margin: 1rem 0; 
+  }
+  
+  .hangmandescription, 
+  .vigeneredescription { 
+    margin: 0.5rem; 
+    text-align: center; 
+    font-size: 0.9em; 
+  }
+
+  .imagehangman, 
+  .imagevigenere {
+    margin: 0.5rem auto; 
+    width: 100%; 
+    max-width: 90%; 
+    height: auto; 
+  }
+
+  .vigeneretitre { 
+    text-align: center; 
+    font-size: 1em; 
+  }
+}
