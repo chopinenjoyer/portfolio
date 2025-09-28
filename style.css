@@ -551,6 +551,11 @@ textarea {
     text-align: center; 
     min-height: auto; 
   }
+
+  .etoile {
+  opacity: 0;
+  width: 0.8rem;
+  height: 0.8rem;
   
   .logo img { 
     width: 3rem; 
