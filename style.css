@@ -552,7 +552,7 @@ textarea {
     min-height: auto; 
   }
 
-  h.etoile {
+  .etoile {
   opacity: 0;
   width: 0.8rem;
   height: 0.8rem;
