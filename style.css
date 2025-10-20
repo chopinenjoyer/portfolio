@@ -552,11 +552,25 @@ textarea {
     min-height: auto; 
   }
 
-  .etoile {
+.etoile {
   opacity: 0;
-  width: 0.8rem;
-  height: 0.8rem;
-  }
+  width: 0.5rem;
+  height: 0.5rem;
+  background: white;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+}
+  
   .logo img { 
     width: 3rem; 
     margin: 0 auto 0.25rem; 
