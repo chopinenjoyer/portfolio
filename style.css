@@ -1,7 +1,8 @@
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #b4b4b4;
+  background: #efefef;
   color: #222;
 }
 
@@ -230,7 +231,7 @@ header {
 
 .tab-content {
   padding: 20px;
-  background: #b4b4b4;
+  background: #efefef;
 }
 
 .tab-panel {
@@ -282,7 +283,7 @@ h3 {
   margin-top: 8rem;
 }
 
-.vigeneretitre {
+.titre2 {
   text-align: right;
   margin-top: 5rem
 }
@@ -498,7 +499,9 @@ textarea {
   
   .logo-media {
     position: static;
-    margin: 0.5rem auto 0; 
+    margin: 0.5rem auto 0;
+    display: flex;
+    flex-direction: row; 
   }
 
   .statbio {
@@ -552,24 +555,14 @@ textarea {
     min-height: auto; 
   }
 
-.etoile {
+ h2 {
+  font-size: 3.5rem;
+ }
+
+  .etoile {
   opacity: 0;
-  width: 0.5rem;
-  height: 0.5rem;
-  background: white;
-  clip-path: polygon(
-    50% 0%,
-    61% 35%,
-    98% 35%,
-    68% 57%,
-    79% 91%,
-    50% 70%,
-    21% 91%,
-    32% 57%,
-    2% 35%,
-    39% 35%
-  );
-}
+  width: 0.8rem;
+  height: 0.8rem;
   
   .logo img { 
     width: 3rem; 
@@ -647,6 +640,7 @@ textarea {
 
   .vigeneretitre { 
     text-align: center; 
-    font-size: 1em; }
-
+    font-size: 1em; 
   }
+}
+}
