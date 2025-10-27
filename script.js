@@ -17,6 +17,38 @@ if (statbioContainer) {
   const statbioTables = statbioContainer.querySelectorAll(".statbio[data-table]");
   const statbioToggles = statbioContainer.querySelectorAll(".statbio-toggle[data-role='toggle']");
   const statbioTrigger = document.querySelector(".statbio-trigger");
+  const playerPhoto = document.querySelector(".photo-joueur img");
+  const primaryPhotoSrc =
+    playerPhoto?.dataset.primarySrc || playerPhoto?.getAttribute("src") || null;
+  const secondaryPhotoSrc =
+    playerPhoto?.dataset.secondarySrc || playerPhoto?.getAttribute("src") || null;
+  const triggerPhotoAnimation = () => {
+    if (!playerPhoto) {
+      return;
+    }
+
+    playerPhoto.classList.remove("is-rotating");
+    void playerPhoto.offsetWidth;
+    playerPhoto.classList.add("is-rotating");
+  };
+
+  if (playerPhoto) {
+    playerPhoto.addEventListener("animationend", () => {
+      playerPhoto.classList.remove("is-rotating");
+    });
+  }
+
+  const updatePlayerPhoto = (target) => {
+    if (!playerPhoto || !primaryPhotoSrc || !secondaryPhotoSrc) {
+      return;
+    }
+
+    const nextSrc = target === "secondary" ? secondaryPhotoSrc : primaryPhotoSrc;
+    if (playerPhoto.getAttribute("src") !== nextSrc) {
+      playerPhoto.setAttribute("src", nextSrc);
+      triggerPhotoAnimation();
+    }
+  };
 
   const updateStatbioView = (target) => {
     statbioTables.forEach((table) => {
@@ -31,6 +63,8 @@ if (statbioContainer) {
     statbioToggles.forEach((button) => {
       button.setAttribute("aria-pressed", String(isSecondary));
     });
+
+    updatePlayerPhoto(target);
   };
 
   updateStatbioView(statbioContainer.dataset.activeTable || "primary");
