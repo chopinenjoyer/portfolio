@@ -112,3 +112,25 @@ if (animatedElements.length) {
 
   animatedElements.forEach((element) => observer.observe(element));
 }
+
+// Contact form -> open email client with prefilled message
+const contactForm = document.getElementById("contact-form");
+if (contactForm) {
+  contactForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const lastname = document.getElementById("lastname")?.value.trim() || "";
+    const firstname = document.getElementById("firstname")?.value.trim() || "";
+    const email = document.getElementById("email")?.value.trim() || "";
+    const message = document.getElementById("message")?.value.trim() || "";
+
+    const subject = `Contact Portfolio - ${firstname} ${lastname}`.trim();
+    const body = `Nom: ${lastname}\nPrénom: ${firstname}\nEmail: ${email}\n\nMessage:\n${message}`;
+
+    const mailto = `mailto:fredericprassettepro@gmail.com?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+
+    window.location.href = mailto;
+  });
+}
