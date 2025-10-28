@@ -83,6 +83,24 @@ header {
   background: #00649e;
 }
 
+.site-footer {
+  background: #00649e;
+  color: #f2e9e9;
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+.site-footer a {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible {
+  text-decoration: underline;
+}
+
 .photo-joueur img {
   width: 20rem;
   height: 20rem;
