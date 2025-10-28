@@ -22,6 +22,7 @@ if (statbioContainer) {
     playerPhoto?.dataset.primarySrc || playerPhoto?.getAttribute("src") || null;
   const secondaryPhotoSrc =
     playerPhoto?.dataset.secondarySrc || playerPhoto?.getAttribute("src") || null;
+  
   const triggerPhotoAnimation = () => {
     if (!playerPhoto) {
       return;

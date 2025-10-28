@@ -123,6 +123,19 @@ header {
   top: 1rem;
   width: 8rem;
   padding: 1rem;
+  border-radius: 0.75rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.logo a {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.logo a:hover img,
+.logo a:focus-visible img {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
 }
 
 .equipeposte {
